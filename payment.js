@@ -3,7 +3,12 @@
 
   function metamask_pay(){
       if(typeof window.ethereum !== 'undefined'){ alert('OK metamask'); }
-        EThAppDeploy.loadEtherium();
+        let n = ethereum.chainId 
+             if(n == '0x1'){
+                  EThAppDeploy.loadEtherium();
+             }else{
+                 alert("Switch to Ethereum Network");
+             }
   }
   
   EThAppDeploy = {
